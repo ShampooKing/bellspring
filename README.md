@@ -171,3 +171,5 @@ Instagram: <https://instagram.com/creativetimofficial>
 
 [CHANGELOG]: ./CHANGELOG.md
 [version-badge]: https://img.shields.io/badge/version-1.3.0-blue.svg
+#   S h a m p o o K i n g . g i t h u b . i o  
+ 
