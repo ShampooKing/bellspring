@@ -1,7 +1,4 @@
-import { Component, OnInit, Renderer2, OnDestroy } from '@angular/core';
-import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
-import { NgbAccordionConfig } from '@ng-bootstrap/ng-bootstrap';
-import * as Rellax from 'rellax';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
     selector: 'app-components',
@@ -17,67 +14,28 @@ export class ComponentsComponent implements OnInit, OnDestroy {
 
     iframeHeight: string = '4664px';
 
-    data: Date = new Date();
-
-    page = 4;
-    page1 = 5;
-    page2 = 3;
-    focus;
-    focus1;
-    focus2;
-
-    date: { year: number, month: number };
-    model: NgbDateStruct;
-
-    public isCollapsed = true;
-    public isCollapsed1 = true;
-    public isCollapsed2 = true;
-
-    state_icon_primary = true;
-
-    constructor(private renderer: Renderer2, config: NgbAccordionConfig) {
-        config.closeOthers = true;
-        config.type = 'info';
-    }
-    isWeekend(date: NgbDateStruct) {
-        const d = new Date(date.year, date.month - 1, date.day);
-        return d.getDay() === 0 || d.getDay() === 6;
-    }
-
-    isDisabled(date: NgbDateStruct, current: { month: number }) {
-        return date.month !== current.month;
+    constructor() {
     }
 
     ngOnInit() {
-        var rellaxHeader = new Rellax('.rellax-header');
-
-        var navbar = document.getElementsByTagName('nav')[0];
-        navbar.classList.add('navbar-transparent');
-        var body = document.getElementsByTagName('body')[0];
-        body.classList.add('index-page');
     }
     ngOnDestroy() {
-        var navbar = document.getElementsByTagName('nav')[0];
-        navbar.classList.remove('navbar-transparent');
-        var body = document.getElementsByTagName('body')[0];
-        body.classList.remove('index-page');
     }
 
     setIframeHeight() {
         if (!this.detectmob()) {
-            this.iframeHeight = (window.innerWidth * 1900 / 774) + 'px';
+            this.iframeHeight = (window.innerWidth * 2000 / 774) + 'px';
 
         } else {
-            this.iframeHeight = (window.innerWidth * 1800 / 640) + 'px';
+            this.iframeHeight = (window.innerWidth * 1830 / 640) + 'px';
         }
-        console.log(this.iframeHeight);
     }
 
     detectmob() {
         if (navigator.userAgent.match(/Android/i)
-            || navigator.userAgent.match(/webOS/i)
+            // || navigator.userAgent.match(/webOS/i)
             || navigator.userAgent.match(/iPhone/i)
-            || navigator.userAgent.match(/iPad/i)
+            // || navigator.userAgent.match(/iPad/i)
             || navigator.userAgent.match(/iPod/i)
             || navigator.userAgent.match(/BlackBerry/i)
             || navigator.userAgent.match(/Windows Phone/i)

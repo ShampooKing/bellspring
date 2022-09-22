@@ -9,11 +9,15 @@ import { ExamplesModule } from './examples/examples.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { TopButtonComponent } from './shared/top-button/top-button.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        NavbarComponent
+        NavbarComponent,
+        FooterComponent,
+        TopButtonComponent
     ],
     imports: [
         BrowserAnimationsModule,
@@ -25,6 +29,9 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
         ExamplesModule
     ],
     providers: [],
+    exports: [
+        TopButtonComponent
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

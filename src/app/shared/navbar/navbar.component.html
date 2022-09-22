@@ -19,10 +19,32 @@
             <p>HOME</p>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../index">
+        <li class="nav-item" (mouseleave)="mouseover = 0">
+          <a class="nav-link" (mouseover)="mouseover = 1">
             <p>LOGISTICS</p>
           </a>
+          <div *ngIf="mouseover === 1 && !isMobileDevice" class="panel" style="background-color: #2c2c2c;">
+            <a class="nav-link" href="../logistics?page=1">
+              <p>A.I. Warehouse Management System (i-WMS)</p>
+            </a>
+            <a class="nav-link" href="../logistics?page=2">
+              <p>A.I. Driven Apps & Platforms</p>
+            </a>
+            <a class="nav-link" href="../logistics?page=3">
+              <p>A.I. Driven Solutions - Real World Case Study</p>
+            </a>
+          </div>
+          <div *ngIf="mouseover === 1 && isMobileDevice">
+            <a class="nav-link" href="../logistics?page=1">
+              <p>A.I. Warehouse Management System (i-WMS)</p>
+            </a>
+            <a class="nav-link" href="../logistics?page=2">
+              <p>A.I. Driven Apps & Platforms</p>
+            </a>
+            <a class="nav-link" href="../logistics?page=3">
+              <p>A.I. Driven Solutions - Real World Case Study</p>
+            </a>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../index">
