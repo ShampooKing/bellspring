@@ -12,7 +12,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 
 export class ComponentsComponent implements OnInit, OnDestroy {
 
-    iframeHeight: string = '4664px';
+    iframeHeight: string = '';
 
     constructor() {
     }
@@ -24,10 +24,10 @@ export class ComponentsComponent implements OnInit, OnDestroy {
 
     setIframeHeight() {
         if (!this.detectmob()) {
-            this.iframeHeight = (window.innerWidth * 2000 / 774) + 'px';
+            this.iframeHeight = (window.innerWidth * 2300 / 774) + 'px';
 
         } else {
-            this.iframeHeight = (window.innerWidth * 1830 / 640) + 'px';
+            this.iframeHeight = (window.innerWidth * 2250 / 640) + 'px';
         }
     }
 
