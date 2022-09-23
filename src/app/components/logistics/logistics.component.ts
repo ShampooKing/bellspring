@@ -29,19 +29,19 @@ export class LogisticsComponent implements OnInit, OnDestroy {
     switch (this.pageIndex) {
       case '1': {
         if (!this.detectmob()) {
-          this.iframeHeight = (window.innerWidth * 3500 / 774) + 'px';
+          this.iframeHeight = (window.innerWidth * 5200 / 774) + 'px';
 
         } else {
-          this.iframeHeight = (window.innerWidth * 3500 / 640) + 'px';
+          this.iframeHeight = (window.innerWidth * 4800 / 640) + 'px';
         }
         break;
       }
       case '2': {
         if (!this.detectmob()) {
-          this.iframeHeight = (window.innerWidth * 2000 / 774) + 'px';
+          this.iframeHeight = (window.innerWidth * 2700 / 774) + 'px';
 
         } else {
-          this.iframeHeight = (window.innerWidth * 1830 / 640) + 'px';
+          this.iframeHeight = (window.innerWidth * 2300 / 640) + 'px';
         }
         break;
       }
